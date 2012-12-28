@@ -25,3 +25,21 @@ On the figure below, grey nodes - are the nodes that should be returned by algor
 ![figure 3](https://raw.github.com/bolshchikov/retail-center/master/img/ex3.png) 
 
 The algorithm should use function `Node* getBestCustomers(Node* root)`.
+
+## Chapter C
+Let's say that tree used in chapter B how has at most k children. What's going to be the complexity of your algorithm?
+
+## Implementation guidelines
+1. `Node.py` contains description of a class Node
+2. `HW.py` contains implementation of necessary function
+3. File `exmple_main.py` is used for a check.
+
+## TODO
+1. Rewrite given files into Python
+	* Node.h
+	* HW.cpp
+	* example_main.cpp
+2. Implement Chapter A
+3. Implement Chapter B
+4. Write Chapter C
+5. Write documentation
