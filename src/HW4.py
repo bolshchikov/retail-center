@@ -7,14 +7,14 @@ class HW4:
 	def canDemandBeAnswered(self, root):
 		'''
 		This method will return true if the tree rooted at node sn can answer
-        the demand induced by its leaves.
+		the demand induced by its leaves.
 		'''
 		pass
 
 	def getBestCustomers(self, root):
 		'''
 		This method should return a linked list of nodes representing the 
-        customers with the overall highest revenue.
-        The resulting list should conform to the capacity limitations.
+		customers with the overall highest revenue.
+		The resulting list should conform to the capacity limitations.
 		'''
 		pass 
