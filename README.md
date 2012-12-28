@@ -20,7 +20,7 @@ Here it is additionally given that each leaf now has new attribute - price(v). T
 * You can assume that each node has only two children (binary tree)
 
 What is the complexity of the algorithm?
-On the figure below, grey nodes - are the nodes that should be returned by algorithm.
+On the figure below, gray nodes - are the nodes that should be returned by algorithm.
 
 ![figure 3](https://raw.github.com/bolshchikov/retail-center/master/img/ex3.png) 
 
@@ -32,7 +32,7 @@ Let's say that tree used in chapter B how has at most k children. What's going t
 ## Implementation guidelines
 1. `Node.py` contains description of a class Node
 2. `HW.py` contains implementation of necessary function
-3. File `exmple_main.py` is used for a check.
+3. File `example_main.py` is used for a check.
 
 ## TODO
 1. Rewrite given files into Python
