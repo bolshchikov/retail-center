@@ -35,10 +35,10 @@ Let's say that tree used in chapter B how has at most k children. What's going t
 3. File `example_main.py` is used for a check.
 
 ## TODO
-1. Rewrite given files into Python
-	* Node.h
-	* HW.cpp
-	* example_main.cpp
+1. <del>Rewrite given files into Python</del>
+	* <del>Node.h</del>
+	* <del>HW.cpp</del>
+	* <del>example_main.cpp</del>
 2. Implement Chapter A
 3. Implement Chapter B
 4. Write Chapter C
