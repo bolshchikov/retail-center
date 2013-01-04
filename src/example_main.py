@@ -49,7 +49,6 @@ def part1():
 	s3.addChild(s2_4)
 	ans = hw4.canDemandBeAnswered(s8)
 	print ' ans = %d' % ans
-	#hw4.printTree(s8)
 	
 	#successfull scenario
 	s2_15 = Node.Node(15)
