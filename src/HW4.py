@@ -1,3 +1,5 @@
+import math
+
 class HW4:
 
 	'''
@@ -18,15 +20,15 @@ class HW4:
 		Complexity is O(nlogn)
 		'''
 
-		#debugging!!!
-		string = ''
-		for i in root.getPath():
-			string += str(i.getCapacity()) + ' '
-		print string
+		#debugging
+		# string = ''
+		# for i in root.getPath():
+		# 	string += str(i.getCapacity()) + ' '
+		# print string
 
-		num = 0								# amount of leaves
-		root.addToPath(root)				# add node itself to the path for future comparison
-		for node in root.getChildren():		# count amount of leaves or save path to node
+		num = 0										# amount of leaves
+		root.addToPath(root)						# add node itself to the path for future comparison
+		for node in root.getChildren():				# count amount of leaves or save path to node
 			node.addToPath(root)
 			if node.isLeaf():
 				num += 1
@@ -38,11 +40,17 @@ class HW4:
 		for i in range(2, len(root.getPath())):		# for every node in the path, compare node's capacity											# to amount of leaves	
 			if num > root.getPath()[i].getCapacity():
 				return 0
-		for node in root.getChildren():		#retursive call for each child node
+		for node in root.getChildren():				#recursive call for each child node
 			if self.canDemandBeAnswered(node) == 0:
 				return 0
 		return 1
 
+
+	def maxLeaf(self, leaf1, leaf2):
+		if leaf1.getPrice() > leaf2.getPrice():
+			return leaf1
+		else: 
+			return leaf2
 
 
 	def getBestCustomers(self, root):
@@ -51,7 +59,33 @@ class HW4:
 		customers with the overall highest revenue.
 		The resulting list should conform to the capacity limitations.
 		'''
-		pass 
+		
+		answer = None # pointer to the head of the linked list
+
+		q = [root]
+		while q:
+			v = q.pop(0)
+			for node in v.getChildren():
+				if node.isLeaf():
+					if min(v.getExpectation(), v.getCapacity()) == 1:
+						maxLeaf = self.maxLeaf(v.getChildren()[0], v.getChildren()[1])
+						if answer == None:
+							answer = maxLeaf
+						else:
+							maxLeaf.next = answer
+							answer = maxLeaf
+						break
+					else:
+						if answer == None:
+							answer = node
+						else:
+							node.next = answer
+							answer = node			
+				else:
+					q = q + [node]
+					node.setExpectation(int(math.ceil(v.getCapacity()/2)))
+		return answer
+					
 
 	def printTree(self, root):
 		'''Tree printing for debug purposes'''

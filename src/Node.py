@@ -4,6 +4,8 @@ class Node:
 		self._price = 0
 		self._children = []
 		self._path = []
+		self._exprectation = None
+		self.next = None
 	
 	def isLeaf(self):
 		'''Should return true if this node has no children, false otherwise'''
@@ -33,3 +35,9 @@ class Node:
 
 	def getPath(self):
 		return self._path
+
+	def setExpectation(self, value):
+		self._exprectation = value
+
+	def getExpectation(self):
+		return self._exprectation

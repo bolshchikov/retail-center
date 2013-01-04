@@ -39,7 +39,7 @@ Let's say that tree used in chapter B how has at most k children. What's going t
 	* <del>Node.h</del>
 	* <del>HW.cpp</del>
 	* <del>example_main.cpp</del>
-2. Implement Chapter A
-3. Implement Chapter B
+2. <del>Implement Chapter A</del>
+3. <del>Implement Chapter B</del>
 4. Write Chapter C
 5. Write documentation

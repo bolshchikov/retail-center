@@ -118,7 +118,7 @@ def part2():
 	l11 = Node.Node()
 	l11.setPrice(11)
 	l13 = Node.Node()
-	l11.setPrice(13)
+	l13.setPrice(13)
 	l57 = Node.Node()
 	l57.setPrice(57)
 	l93 = Node.Node()
@@ -149,12 +149,14 @@ def part2():
 	s1_4.addChild(l80)
 	s2_3.addChild(l25)
 	s2_3.addChild(l80_1)
+	
 	bestCusts = hw4.getBestCustomers(s7)
 	print 'highest priced customers: '
 	t = bestCusts
 	while t != None:
 		print t.getPrice()
 		t = t.next
+	return 1
 
 def main():
 	part1()
